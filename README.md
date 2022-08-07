@@ -21,3 +21,8 @@ Generate Heatmap from GPX-Files
 * .fit:
     * https://pypi.org/project/fitparse/
     * https://pypi.org/project/fit2gpx/
+
+# Possible extensions
+* Saving map:
+    * https://stackoverflow.com/questions/66140534/how-to-save-a-map-section-in-python-using-folium
+    * https://stackoverflow.com/questions/53565979/export-a-folium-map-as-a-png
