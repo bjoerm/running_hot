@@ -15,13 +15,13 @@ the_map = create_folium_map()
 
 for file in files:
     print(file)
+    # TODO Add check to filter out empty .gpx files (<1kb).
     for track in read_gpx_file(file):
-        for i, segment in enumerate(track["segments"]):
-            add_segment_to_map(the_map=the_map, segment=segment, add_start_end=False, line_options={"opacity": 0.10, "weight": 5})
-
+        for i, segment in enumerate(track["segments"]):  # TODO Use tqdm here.
+            add_segment_to_map(the_map=the_map, segment=segment, add_start_end=False, line_options={"opacity": 0.30, "weight": 5, "color": "red"})
 
 # To store the map as a HTML page:
-the_map.save("map_002.html")
+the_map.save("output/map.html")
 
 
 # To display the map in a Jupyter notebook:
